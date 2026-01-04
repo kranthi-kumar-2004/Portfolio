@@ -5,24 +5,27 @@
   <title>Nashitha | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
 <!-- ================= HEADER ================= -->
 <header class="header">
   <div class="logo">Nashitha</div>
-  <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#education">Education</a>
-    <a href="#certifications">Certificates</a>
-    <a href="#contact">Contact</a>
+
+  <!-- Menu Icon -->
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <!-- Menu -->
+  <nav class="menu" id="menu">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#skills" onclick="toggleMenu()">Skills</a>
+    <a href="#projects" onclick="toggleMenu()">Projects</a>
+    <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+    <a href="#education" onclick="toggleMenu()">Education</a>
+    <a href="#certifications" onclick="toggleMenu()">Certificates</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
   </nav>
 </header>
 
@@ -46,8 +49,7 @@
   <h2>About Me</h2>
   <p>
     I am a detail-oriented B.Tech student pursuing Artificial Intelligence and
-    Data Science at Audisankara Institute of Technology with a strong foundation
-    in HTML, CSS, JavaScript, Object-Oriented Programming, and DBMS.
+    Data Science with strong fundamentals in HTML, CSS, JavaScript, OOP and DBMS.
   </p>
 </section>
 
@@ -55,14 +57,14 @@
 <section class="section reveal" id="skills">
   <h2>Skills</h2>
   <div class="skills">
-    <div class="skill-card reveal">HTML</div>
-    <div class="skill-card reveal">CSS</div>
-    <div class="skill-card reveal">JavaScript</div>
-    <div class="skill-card reveal">OOP</div>
-    <div class="skill-card reveal">DBMS</div>
-    <div class="skill-card reveal">Git</div>
-    <div class="skill-card reveal">VS Code</div>
-    <div class="skill-card reveal">Eclipse</div>
+    <div class="skill-card">HTML</div>
+    <div class="skill-card">CSS</div>
+    <div class="skill-card">JavaScript</div>
+    <div class="skill-card">OOP</div>
+    <div class="skill-card">DBMS</div>
+    <div class="skill-card">Git</div>
+    <div class="skill-card">VS Code</div>
+    <div class="skill-card">Eclipse</div>
   </div>
 </section>
 
@@ -70,11 +72,9 @@
 <section class="section reveal" id="projects">
   <h2>Projects</h2>
 
-  <div class="project-card reveal">
+  <div class="project-card">
     <h3>Calculator Application</h3>
-    <p>
-      Responsive calculator using HTML, CSS & JavaScript with real-time arithmetic operations.
-    </p>
+    <p>Responsive calculator using HTML, CSS & JavaScript.</p>
     <span>HTML • CSS • JavaScript</span><br><br>
     <a href="https://nashitha.github.io/Calculator/" target="_blank" class="btn primary small">
       View Live Project
@@ -82,19 +82,22 @@
   </div>
 </section>
 
-<!-- ================= GALLERY (HORIZONTAL CARDS) ================= -->
+<!-- ================= GALLERY (HORIZONTAL) ================= -->
 <section class="section reveal" id="gallery">
   <h2>Gallery</h2>
 
-  <div class="gallery-vertical">
-    <div class="gallery-card reveal">
-      <img src="https://picsum.photos/800/400?random=1">
+  <div class="gallery-horizontal">
+    <div class="gallery-card">
+      <img src="https://picsum.photos/600/350?random=1">
     </div>
-    <div class="gallery-card reveal">
-      <img src="https://picsum.photos/800/400?random=2">
+    <div class="gallery-card">
+      <img src="https://picsum.photos/600/350?random=2">
     </div>
-    <div class="gallery-card reveal">
-      <img src="https://picsum.photos/800/400?random=3">
+    <div class="gallery-card">
+      <img src="https://picsum.photos/600/350?random=3">
+    </div>
+    <div class="gallery-card">
+      <img src="https://picsum.photos/600/350?random=4">
     </div>
   </div>
 </section>
@@ -103,7 +106,7 @@
 <section class="section reveal" id="education">
   <h2>Education</h2>
   <div class="timeline">
-    <div class="timeline-item reveal">
+    <div class="timeline-item">
       <h3>B.Tech – AI & Data Science</h3>
       <p>Audisankara Institute of Technology</p>
       <p>CGPA: 8.43 | 2026</p>
@@ -114,7 +117,7 @@
 <!-- ================= CERTIFICATIONS ================= -->
 <section class="section reveal" id="certifications">
   <h2>Certifications</h2>
-  <div class="contact-box reveal">
+  <div class="contact-box">
     <ul>
       <li>Java Programming – Oracle Academy</li>
       <li>SQL for Data Management – Coursera</li>
@@ -125,20 +128,11 @@
 <!-- ================= CONTACT ================= -->
 <section class="section reveal" id="contact">
   <h2>Contact</h2>
-
-  <div class="contact-box reveal">
+  <div class="contact-box">
     <p>📧 nashithashaik964@gmail.com</p>
     <p>📞 +91 8341297542</p>
-    <p>
-      <span class="contact-link" onclick="window.open('https://www.linkedin.com/in/nashitha-shaikh-426627283')">
-        🔗 LinkedIn
-      </span>
-    </p>
-    <p>
-      <span class="contact-link" onclick="window.open('https://github.com/Nashitha')">
-        💻 GitHub
-      </span>
-    </p>
+    <p onclick="window.open('https://www.linkedin.com/in/nashitha-shaikh-426627283')">🔗 LinkedIn</p>
+    <p onclick="window.open('https://github.com/Nashitha')">💻 GitHub</p>
   </div>
 </section>
 

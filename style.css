@@ -5,58 +5,87 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #0b1120;
   color: #e5e7eb;
-  overflow-x: hidden;
 }
 
-.bg-gradient {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-  animation: gradientMove 12s ease infinite;
-  z-index: -1;
+/* ===== GLOBAL SECTION STYLES ===== */
+.section {
+  padding: 80px 10%;
+  position: relative;
 }
 
-@keyframes gradientMove {
-  0% { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(360deg); }
+.section:nth-child(even) {
+  background: linear-gradient(135deg, #020617, #020617);
 }
 
+.section:nth-child(odd) {
+  background: linear-gradient(135deg, #0b1120, #111827);
+}
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  color: #38bdf8;
+}
+
+/* ===== HERO ===== */
 .hero {
   min-height: 100vh;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 120px 20px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
 }
 
 .hero span {
   color: #38bdf8;
 }
 
-.hero-text {
-  max-width: 600px;
+.hero p {
+  max-width: 650px;
   margin: 20px auto;
 }
 
-.hero-buttons {
-  margin-top: 30px;
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 5px;
+  transition: 0.4s;
 }
 
-.section {
-  padding: 80px 10%;
+.btn.primary {
+  background: #38bdf8;
+  color: #020617;
+  box-shadow: 0 0 20px #38bdf8;
 }
 
-.section.dark {
-  background: #020617;
+.btn.primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px #38bdf8;
 }
 
-h2 {
-  font-size: 34px;
-  margin-bottom: 20px;
+.btn.outline {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
 }
 
+/* ===== SKILLS ===== */
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
@@ -64,91 +93,93 @@ h2 {
 }
 
 .skill-card {
-  background: #020617;
-  padding: 20px;
+  background: linear-gradient(135deg, #020617, #020617);
+  padding: 18px;
+  border-radius: 12px;
   text-align: center;
-  border-radius: 10px;
   transition: 0.4s;
+  border: 1px solid #38bdf820;
 }
 
 .skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px #38bdf8;
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px #38bdf8;
 }
 
+/* ===== PROJECTS ===== */
 .project-card {
-  position: relative;
   background: #020617;
-  padding: 30px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 16px;
+  position: relative;
   overflow: hidden;
+  border: 1px solid #38bdf820;
 }
 
-.project-overlay {
+.project-card span {
+  color: #38bdf8;
+  font-size: 14px;
+}
+
+.project-card::before {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15,23,42,0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: 0.4s;
+  background: linear-gradient(120deg, transparent, #38bdf840, transparent);
+  transform: translateX(-100%);
+  transition: 0.5s;
 }
 
-.project-card:hover .project-overlay {
-  opacity: 1;
+.project-card:hover::before {
+  transform: translateX(100%);
 }
 
+/* ===== EDUCATION (TIMELINE) ===== */
 .timeline {
-  position: relative;
-}
-
-.timeline .line {
-  width: 4px;
-  height: 100%;
-  background: #38bdf8;
-  position: absolute;
-  left: 0;
+  border-left: 3px solid #38bdf8;
+  padding-left: 30px;
 }
 
 .timeline-item {
-  margin-left: 30px;
+  margin-bottom: 30px;
+  position: relative;
 }
 
-.btn {
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.glow {
+.timeline-item::before {
+  content: "";
+  width: 14px;
+  height: 14px;
   background: #38bdf8;
-  color: #020617;
+  border-radius: 50%;
+  position: absolute;
+  left: -39px;
+  top: 5px;
   box-shadow: 0 0 15px #38bdf8;
 }
 
-.glow:hover {
-  box-shadow: 0 0 30px #38bdf8;
+/* ===== CONTACT ===== */
+.contact-box {
+  background: #020617;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #38bdf820;
 }
 
-.outline {
-  border: 2px solid #38bdf8;
-  color: #38bdf8;
+/* ===== FOOTER ===== */
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 20px;
 }
 
+/* ===== SCROLL ANIMATION ===== */
 .reveal {
   opacity: 0;
-  transform: translateY(50px);
-  transition: 1s;
+  transform: translateY(60px);
+  transition: 0.8s ease;
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
 }

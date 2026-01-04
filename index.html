@@ -5,12 +5,14 @@
   <title>Nashitha | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=final">
+
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- ================= HEADER ================= -->
 <header class="header">
   <div class="logo">Nashitha</div>
   <nav class="nav">
@@ -24,10 +26,22 @@
   </nav>
 </header>
 
-<!-- ===== HERO (BACKGROUND ONLY AS IN SCREENSHOT) ===== -->
-<section class="hero"></section>
+<!-- ================= HERO ================= -->
+<section class="hero reveal">
+  <h1>Nashitha <span>Shaik</span></h1>
+  <h2>B.Tech | AI & Data Science</h2>
+  <p>
+    Front-end development enthusiast passionate about building modern,
+    responsive, and user-friendly web applications.
+  </p>
 
-<!-- ===== ABOUT ===== -->
+  <div class="hero-buttons">
+    <a href="#projects" class="btn primary">View Projects</a>
+    <a href="resume.pdf" class="btn outline" download>Download Resume</a>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
 <section class="section reveal" id="about">
   <h2>About Me</h2>
   <p>
@@ -37,53 +51,59 @@
   </p>
 </section>
 
-<!-- ===== SKILLS ===== -->
+<!-- ================= SKILLS ================= -->
 <section class="section reveal" id="skills">
   <h2>Skills</h2>
   <div class="skills">
-    <div class="skill-card">HTML</div>
-    <div class="skill-card">CSS</div>
-    <div class="skill-card">JavaScript</div>
-    <div class="skill-card">OOP</div>
-    <div class="skill-card">DBMS</div>
-    <div class="skill-card">Git</div>
-    <div class="skill-card">VS Code</div>
-    <div class="skill-card">Eclipse</div>
+    <div class="skill-card reveal">HTML</div>
+    <div class="skill-card reveal">CSS</div>
+    <div class="skill-card reveal">JavaScript</div>
+    <div class="skill-card reveal">OOP</div>
+    <div class="skill-card reveal">DBMS</div>
+    <div class="skill-card reveal">Git</div>
+    <div class="skill-card reveal">VS Code</div>
+    <div class="skill-card reveal">Eclipse</div>
   </div>
 </section>
 
-<!-- ===== PROJECTS ===== -->
+<!-- ================= PROJECTS ================= -->
 <section class="section reveal" id="projects">
   <h2>Projects</h2>
-  <div class="project-card">
+
+  <div class="project-card reveal">
     <h3>Calculator Application</h3>
     <p>
       Responsive calculator using HTML, CSS & JavaScript with real-time arithmetic operations.
     </p>
     <span>HTML • CSS • JavaScript</span><br><br>
-    <a href="https://nashitha.github.io/Calculator/" target="_blank" class="btn primary">
+    <a href="https://nashitha.github.io/Calculator/" target="_blank" class="btn primary small">
       View Live Project
     </a>
   </div>
 </section>
 
-<!-- ===== GALLERY (HORIZONTAL LIKE SCREENSHOT) ===== -->
+<!-- ================= GALLERY (HORIZONTAL CARDS) ================= -->
 <section class="section reveal" id="gallery">
   <h2>Gallery</h2>
 
-  <div class="gallery-horizontal">
-    <div class="gallery-card"><img src="https://picsum.photos/500/300?1"></div>
-    <div class="gallery-card"><img src="https://picsum.photos/500/300?2"></div>
-    <div class="gallery-card"><img src="https://picsum.photos/500/300?3"></div>
-    <div class="gallery-card"><img src="https://picsum.photos/500/300?4"></div>
+  <div class="gallery-vertical">
+    <div class="gallery-card reveal">
+      <img src="https://picsum.photos/800/400?random=1">
+    </div>
+    <div class="gallery-card reveal">
+      <img src="https://picsum.photos/800/400?random=2">
+    </div>
+    <div class="gallery-card reveal">
+      <img src="https://picsum.photos/800/400?random=3">
+    </div>
   </div>
 </section>
 
-<!-- ===== EDUCATION ===== -->
+<!-- ================= EDUCATION ================= -->
 <section class="section reveal" id="education">
   <h2>Education</h2>
   <div class="timeline">
-    <div class="timeline-item">
+    <div class="timeline-item reveal">
       <h3>B.Tech – AI & Data Science</h3>
       <p>Audisankara Institute of Technology</p>
       <p>CGPA: 8.43 | 2026</p>
@@ -91,10 +111,10 @@
   </div>
 </section>
 
-<!-- ===== CERTIFICATIONS ===== -->
+<!-- ================= CERTIFICATIONS ================= -->
 <section class="section reveal" id="certifications">
   <h2>Certifications</h2>
-  <div class="contact-box">
+  <div class="contact-box reveal">
     <ul>
       <li>Java Programming – Oracle Academy</li>
       <li>SQL for Data Management – Coursera</li>
@@ -102,14 +122,23 @@
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
+<!-- ================= CONTACT ================= -->
 <section class="section reveal" id="contact">
   <h2>Contact</h2>
-  <div class="contact-box">
+
+  <div class="contact-box reveal">
     <p>📧 nashithashaik964@gmail.com</p>
     <p>📞 +91 8341297542</p>
-    <p onclick="window.open('https://www.linkedin.com/in/nashitha-shaikh-426627283')">🔗 LinkedIn</p>
-    <p onclick="window.open('https://github.com/Nashitha')">💻 GitHub</p>
+    <p>
+      <span class="contact-link" onclick="window.open('https://www.linkedin.com/in/nashitha-shaikh-426627283')">
+        🔗 LinkedIn
+      </span>
+    </p>
+    <p>
+      <span class="contact-link" onclick="window.open('https://github.com/Nashitha')">
+        💻 GitHub
+      </span>
+    </p>
   </div>
 </section>
 

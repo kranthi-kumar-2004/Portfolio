@@ -5,9 +5,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
   background: #0b1120;
   color: #e5e7eb;
+  overflow-x: hidden;
 }
 
 /* ================= HEADER ================= */
@@ -34,21 +37,22 @@ body {
   cursor: pointer;
 }
 
+/* Menu popup */
 .menu {
   position: absolute;
-  top: 60px;
+  top: 65px;
   right: 8%;
   background: #020617;
-  border-radius: 12px;
+  border-radius: 14px;
+  padding: 12px;
   display: none;
   flex-direction: column;
-  padding: 15px;
 }
 
 .menu a {
-  color: #e5e7eb;
+  padding: 10px 14px;
+  color: inherit;
   text-decoration: none;
-  padding: 10px;
 }
 
 .menu a:hover {
@@ -76,10 +80,12 @@ body {
   gap: 20px;
 }
 
+/* ================= BUTTONS ================= */
 .btn {
   padding: 14px 30px;
   border-radius: 30px;
   text-decoration: none;
+  transition: 0.4s;
 }
 
 .btn.primary {
@@ -91,6 +97,8 @@ body {
   border: 2px solid #38bdf8;
   color: #38bdf8;
 }
+
+.btn:hover { transform: scale(1.08); }
 
 /* ================= SECTIONS ================= */
 .section {
@@ -110,10 +118,17 @@ body {
   text-align: center;
 }
 
+/* ================= PROJECT ================= */
+.project-card {
+  background: #020617;
+  padding: 28px;
+  border-radius: 18px;
+}
+
 /* ================= GALLERY HORIZONTAL ================= */
 .gallery-horizontal {
   display: flex;
-  gap: 25px;
+  gap: 24px;
   overflow-x: auto;
   padding-bottom: 10px;
 }
@@ -128,15 +143,28 @@ body {
 }
 
 .gallery-card {
-  min-width: 300px;
+  min-width: 320px;
   border-radius: 18px;
   overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover {
+  transform: scale(1.04);
 }
 
 .gallery-card img {
   width: 100%;
   display: block;
 }
+
+/* ================= EDUCATION ================= */
+.timeline {
+  border-left: 3px solid #38bdf8;
+  padding-left: 30px;
+}
+
+.timeline-item { margin-bottom: 30px; }
 
 /* ================= CONTACT ================= */
 .contact-box {
@@ -149,9 +177,31 @@ body {
   cursor: pointer;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  background: #020617;
-  text-align: center;
-  padding: 20px;
+/* Remove link look globally */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-buttons .btn {
+    width: 80%;
+  }
 }

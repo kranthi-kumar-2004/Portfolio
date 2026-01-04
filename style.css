@@ -5,28 +5,31 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
   background: #0b1120;
   color: #e5e7eb;
+  overflow-x: hidden;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
 .header {
   position: sticky;
   top: 0;
+  z-index: 1000;
   background: rgba(2,6,23,0.95);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 8%;
-  z-index: 1000;
+  padding: 15px 8%;
 }
 
 .logo {
+  font-size: 22px;
+  font-weight: 700;
   color: #38bdf8;
-  font-size: 20px;
-  font-weight: 600;
 }
 
 .nav a {
@@ -34,109 +37,177 @@ body {
   color: #e5e7eb;
   text-decoration: none;
   font-size: 14px;
+  position: relative;
 }
 
 .nav a:hover {
   color: #38bdf8;
 }
 
-/* ===== HERO BACKGROUND ===== */
+/* ================= HERO ================= */
 .hero {
-  height: 220px;
-  background: linear-gradient(120deg, #203a43, #2c5364);
+  min-height: 100vh;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-/* ===== SECTIONS ===== */
+.hero h1 { font-size: 44px; }
+.hero span { color: #38bdf8; }
+
+.hero h2 { margin-top: 10px; font-size: 26px; }
+
+.hero p {
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+/* ================= BUTTONS ================= */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.btn.primary {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.btn.outline {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.btn:hover { transform: scale(1.08); }
+
+/* ================= SECTIONS ================= */
 .section {
-  padding: 70px 8%;
+  padding: 90px 10%;
+  background: linear-gradient(135deg, #0b1120, #111827);
+}
+
+.section:nth-of-type(even) {
+  background: #020617;
 }
 
 .section h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
   color: #38bdf8;
-  margin-bottom: 25px;
 }
 
-/* ===== SKILLS ===== */
+/* ================= SKILLS ================= */
 .skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
 }
 
 .skill-card {
   background: #020617;
-  padding: 14px;
-  border-radius: 12px;
+  padding: 18px;
+  border-radius: 14px;
   text-align: center;
+  transition: 0.4s;
 }
 
-/* ===== PROJECT ===== */
+.skill-card:hover { transform: translateY(-10px); }
+
+/* ================= PROJECTS ================= */
 .project-card {
   background: #020617;
-  padding: 24px;
-  border-radius: 16px;
+  padding: 28px;
+  border-radius: 18px;
 }
 
-/* ===== BUTTON ===== */
-.btn {
-  background: #38bdf8;
-  color: #020617;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-}
-
-/* ===== GALLERY HORIZONTAL ===== */
-.gallery-horizontal {
+/* ================= GALLERY (HORIZONTAL) ================= */
+.gallery-vertical {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .gallery-card {
-  min-width: 260px;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
+  transition: 0.4s;
 }
 
 .gallery-card img {
   width: 100%;
+  height: auto;
   display: block;
 }
 
-/* ===== EDUCATION ===== */
+.gallery-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px #38bdf8;
+}
+
+/* ================= EDUCATION ================= */
 .timeline {
   border-left: 3px solid #38bdf8;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
-/* ===== CONTACT ===== */
+.timeline-item { margin-bottom: 30px; }
+
+/* ================= CONTACT ================= */
 .contact-box {
   background: #020617;
-  padding: 20px;
-  border-radius: 16px;
+  padding: 25px;
+  border-radius: 18px;
 }
 
-.contact-box p {
+.contact-link {
   cursor: pointer;
+  color: #e5e7eb;
 }
 
-/* ===== FOOTER ===== */
+.contact-link:hover {
+  color: #38bdf8;
+}
+
+/* ================= FOOTER ================= */
 footer {
   background: #020617;
   text-align: center;
-  padding: 18px;
+  padding: 20px;
 }
 
-/* ===== SCROLL ANIMATION ===== */
+/* ================= SCROLL ANIMATION ================= */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s ease;
+  transform: translateY(60px);
+  transition: 0.8s ease;
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-buttons .btn {
+    width: 80%;
+    text-align: center;
+  }
 }

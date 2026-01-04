@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Nashitha | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="logo">Nashitha</div>
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 <!-- ================= HERO ================= -->
 <section class="hero reveal">
-  <h1 class="reveal">Nashitha <span>Shaik</span></h1>
-  <h2 class="reveal">B.Tech | AI & Data Science</h2>
-
-  <p class="reveal">
+  <h1>Nashitha <span>Shaik</span></h1>
+  <h2>B.Tech | AI & Data Science</h2>
+  <p>
     Front-end development enthusiast passionate about building modern,
     responsive, and user-friendly web applications.
   </p>
 
-  <div class="hero-buttons reveal">
+  <div class="hero-buttons">
     <a href="#projects" class="btn primary">View Projects</a>
     <a href="resume.pdf" class="btn outline" download>Download Resume</a>
   </div>
@@ -30,20 +44,17 @@
 
 <!-- ================= ABOUT ================= -->
 <section class="section reveal" id="about">
-  <h2 class="reveal">About Me</h2>
-  <p class="reveal">
+  <h2>About Me</h2>
+  <p>
     I am a detail-oriented B.Tech student pursuing Artificial Intelligence and
     Data Science at Audisankara Institute of Technology with a strong foundation
     in HTML, CSS, JavaScript, Object-Oriented Programming, and DBMS.
-    I enjoy solving problems and creating clean, user-friendly interfaces
-    while continuously enhancing my technical skills.
   </p>
 </section>
 
 <!-- ================= SKILLS ================= -->
 <section class="section reveal" id="skills">
-  <h2 class="reveal">Skills</h2>
-
+  <h2>Skills</h2>
   <div class="skills">
     <div class="skill-card reveal">HTML</div>
     <div class="skill-card reveal">CSS</div>
@@ -58,36 +69,48 @@
 
 <!-- ================= PROJECTS ================= -->
 <section class="section reveal" id="projects">
-  <h2 class="reveal">Projects</h2>
+  <h2>Projects</h2>
 
   <div class="project-card reveal">
     <h3>Calculator Application</h3>
     <p>
-      Designed and developed a responsive calculator using HTML, CSS,
-      and JavaScript supporting real-time arithmetic operations with
-      a clean and user-friendly interface.
+      Responsive calculator using HTML, CSS & JavaScript with real-time arithmetic operations.
     </p>
-    <span>HTML • CSS • JavaScript</span>
+    <span>HTML • CSS • JavaScript</span><br><br>
+    <a href="https://nashitha.github.io/Calculator/" target="_blank" class="btn primary small">
+      View Live Project
+    </a>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="section reveal" id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <div class="gallery-item reveal"></div>
+    <div class="gallery-item reveal"></div>
+    <div class="gallery-item reveal"></div>
+    <div class="gallery-item reveal"></div>
+    <div class="gallery-item reveal"></div>
+    <div class="gallery-item reveal"></div>
   </div>
 </section>
 
 <!-- ================= EDUCATION ================= -->
 <section class="section reveal" id="education">
-  <h2 class="reveal">Education</h2>
-
+  <h2>Education</h2>
   <div class="timeline">
     <div class="timeline-item reveal">
-      <h3>B.Tech – Artificial Intelligence & Data Science</h3>
-      <p>Audisankara Institute of Technology, Andhra Pradesh</p>
-      <p><strong>CGPA:</strong> 8.43 | <strong>Expected:</strong> 2026</p>
+      <h3>B.Tech – AI & Data Science</h3>
+      <p>Audisankara Institute of Technology</p>
+      <p>CGPA: 8.43 | 2026</p>
     </div>
   </div>
 </section>
 
 <!-- ================= CERTIFICATIONS ================= -->
 <section class="section reveal" id="certifications">
-  <h2 class="reveal">Certifications</h2>
-
+  <h2>Certifications</h2>
   <div class="contact-box reveal">
     <ul>
       <li>Java Programming – Oracle Academy</li>
@@ -98,19 +121,27 @@
 
 <!-- ================= CONTACT ================= -->
 <section class="section reveal" id="contact">
-  <h2 class="reveal">Contact</h2>
-
+  <h2>Contact</h2>
   <div class="contact-box reveal">
     <p>📧 Email: nashithashaik964@gmail.com</p>
-    <p>📞 Phone: +91 83412 97542</p>
-    <p>🔗 LinkedIn: Add your link</p>
-    <p>💻 GitHub: Add your link</p>
+    <p>📞 Phone: +91 8341297542</p>
+    <p>
+      🔗 LinkedIn:
+      <a href="https://www.linkedin.com/in/nashitha-shaikh-426627283" target="_blank">
+        linkedin.com/in/nashitha-shaikh
+      </a>
+    </p>
+    <p>
+      💻 GitHub:
+      <a href="https://github.com/Nashitha" target="_blank">
+        github.com/Nashitha
+      </a>
+    </p>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="reveal">
-  <p>© 2026 Nashitha Shaik. All Rights Reserved.</p>
+<footer>
+  <p>© 2026 Nashitha Shaik</p>
 </footer>
 
 <script src="script.js"></script>

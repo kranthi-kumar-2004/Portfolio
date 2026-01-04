@@ -1,13 +1,13 @@
-const reveals = document.querySelectorAll(".reveal");
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
 
-function revealOnScroll() {
+/* Scroll Reveal */
+const reveals = document.querySelectorAll(".reveal");
+window.addEventListener("scroll", () => {
   reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
       el.classList.add("active");
     }
   });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+});

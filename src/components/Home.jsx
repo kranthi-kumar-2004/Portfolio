@@ -45,6 +45,13 @@ function Home() {
                         >
                             view_projects()
                         </a>
+                        <a
+                            href="/Kranthi_Kumar_Resume.pdf"
+                            download="Kranthi_Kumar_Resume.pdf"
+                            className="border border-[#00FFA3] text-[#00FFA3] px-6 py-3 font-mono hover:bg-[#00FFA3]/10 transition"
+                        >
+                            download_resume()
+                        </a>
                     </div>
 
                 </div>

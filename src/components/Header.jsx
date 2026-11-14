@@ -16,9 +16,12 @@ function Header() {
 
             <nav className="max-w-7xl mx-auto h-16 px-5 md:px-10 flex items-center justify-between">
 
-                <h2 className="font-mono text-lg md:text-xl text-[#00FFA3] font-bold">
+                <a
+                    href="#home"
+                    className="font-mono text-lg md:text-xl text-[#00FFA3] font-bold"
+                >
                     root@KranthiDev<span className="animate-pulse">_</span>
-                </h2>
+                </a>
 
 
                 <div className="hidden md:flex items-center gap-8 font-mono text-sm">

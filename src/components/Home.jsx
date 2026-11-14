@@ -1,6 +1,6 @@
 function Home() {
     return (
-        <section className="min-h-[calc(100vh-4rem)] w-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat text-white">
+        <section id="home" className="min-h-[calc(100vh-4rem)] w-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat text-white">
 
             <div className="max-w-7xl mx-auto min-h-[calc(100vh-4rem)] px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-10 py-12 md:py-0">
 

@@ -9,7 +9,7 @@ function Education() {
                 </p>
 
                 <h2 className="text-3xl md:text-4xl font-bold font-mono mb-12">
-                    Education <span className="text-[#00FFA3]">_</span>
+                    Education<span className="text-[#00FFA3] animate-pulse">_</span>
                 </h2>
 
                 <div className="border-l-2 border-[#00FFA3]/40 ml-3 pl-8 space-y-12">

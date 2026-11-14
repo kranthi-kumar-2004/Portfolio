@@ -26,3 +26,9 @@ body {
     background: #00FFA3;
     color: #050807;
 }
+
+.terminal-cursor {
+    display: inline-block;
+    color: #00FFA3;
+    animation: cursor-blink 1s step-end infinite;
+}

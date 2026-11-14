@@ -1,4 +1,21 @@
+import { useEffect, useState } from "react";
+
 function Home() {
+    const text="Java Full Stack Developer";
+    const [display,setDisplay]=useState("");
+    useEffect(()=>{
+        let index=0;
+        const intervel=setInterval(()=>{
+            if(index<text.length){
+                setDisplay("J"+text.substring(1,index+1));
+                index++;
+            }else{
+                index=0;
+                setDisplay("J");
+            }
+        },100)
+    },[])
+
     return (
         <section id="home" className="min-h-[calc(100vh-4rem)] w-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat text-white">
 
@@ -12,11 +29,11 @@ function Home() {
 
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-mono leading-tight">
                         Kranthi Kumar
-                        <span className="text-[#00FFA3]">_</span>
+                        <span className="text-[#00FFA3] animate-pulse">_</span>
                     </h1>
 
                     <h2 className="text-xl sm:text-2xl text-gray-300 font-mono">
-                        Java Full Stack Developer
+                        {display}
                     </h2>
 
                     <p className="text-gray-400 leading-7 max-w-xl">

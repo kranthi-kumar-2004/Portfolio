@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -7,23 +9,42 @@ import Education from "./components/Education";
 import Coding from "./components/Coding";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import WelcomePopup from "./components/WelcomePopup";
 
 function App() {
+
+    const [hasAccess, setHasAccess] = useState(
+        sessionStorage.getItem("portfolio_access") === "granted"
+    );
+
+    const grantAccess = () => {
+        sessionStorage.setItem("portfolio_access", "granted");
+        setHasAccess(true);
+    };
+
     return (
         <>
-            <Header />
+            {!hasAccess && (
+                <WelcomePopup onAccessGranted={grantAccess} />
+            )}
 
-            <main className="pt-16">
-                <Home />
-                <About />
-                <Skills />
-                <Projects />
-                <Education />
-                <Coding />
-                <Contact />
-            </main>
+            {hasAccess && (
+                <>
+                    <Header />
 
-            <Footer />
+                    <main className="pt-16">
+                        <Home />
+                        <About />
+                        <Skills />
+                        <Projects />
+                        <Education />
+                        <Coding />
+                        <Contact />
+                    </main>
+
+                    <Footer />
+                </>
+            )}
         </>
     );
 }
